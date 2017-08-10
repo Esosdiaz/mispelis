@@ -1,1 +1,23 @@
-_details.scss
+#details{
+	.principal-row-details{
+		margin-bottom: 0;
+		.titulo-details{
+		height: 30px;
+		background: $gris;
+		padding: 5px;
+		}
+		.imagen-pelicula-details{
+			height: 45vh;
+		}
+		.titulo-watch{
+			height: 40px;
+			.icono-flecha-watch{
+				margin-left: 20px;
+			}
+		}
+		.info-peli-details{
+			background: $blanco;
+			height: 44vh;
+		}
+	}
+}
