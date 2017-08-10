@@ -20253,4 +20253,7 @@ if (jQuery) {
   };
 })(jQuery);
 
-alert("holo");
+$( document ).ready(function(){
+	$(".button-collapse").sideNav();
+
+});
