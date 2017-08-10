@@ -20253,4 +20253,3 @@ if (jQuery) {
   };
 })(jQuery);
 
-alert("holo");
