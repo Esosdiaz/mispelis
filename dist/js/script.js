@@ -20254,6 +20254,8 @@ if (jQuery) {
 })(jQuery);
 
 $(document).ready(function() {
+
+  //var actorElegido = $("").val();
     $.ajax({
       url: 'https://netflixroulette.net/api/api.php?actor=' + 'john travolta',
      type: 'GET',
@@ -20263,8 +20265,8 @@ $(document).ready(function() {
     console.log(e);
 
       e.forEach(function(el){
-        var contenido = '<div><h6>' + el.show_title + '</h6></div>';
-         var act = $(".nomActor").append(contenido);
+        var contenido = '<div><h6>' + el.show_title + '</h6></div><hr>';
+         var act = $(".pelisActor").append(contenido);
        })
 
     })
