@@ -25,21 +25,24 @@ $(document).ready(function() {
 		var duracionMovies = $('<p>').text(arr.runtime);
 		var directorMovies = $('<p>').text(arr.director);
 
+		var linkMovies = $('<a href="details.html">').attr('class', 'link-movies');
 		var tituloMovies = $('<div>').attr('class', 'titulo-movies');
 			tituloMovies.attr('id', 'movies-'+ cont);
 			tituloMovies.append(nombrePeliculaMovies);
 			tituloMovies.append(anoLanzamientoMovies);
 			tituloMovies.append(categoriaMovies);
+			linkMovies.append(tituloMovies);
 
 		var detalleMovies = $('<div>').attr('class', 'detalle-movies');
 			detalleMovies.append(duracionMovies);
 			detalleMovies.append(directorMovies);
 
 		var guardarFavoritoMovies = $('<button>').attr('class', 'guardar-favorito-movies');
+			guardarFavoritoMovies.attr('id', 'movie-btn-'+cont);
 			guardarFavoritoMovies.text('Guardar a Favoritos');
 
 		var infoMovies = $('<div>').attr('class', 'info-movies');
-			infoMovies.append(tituloMovies);
+			infoMovies.append(linkMovies);
 			infoMovies.append(detalleMovies);
 			infoMovies.append(guardarFavoritoMovies);
 
@@ -50,10 +53,14 @@ $(document).ready(function() {
   			localStorage.setItem("tituloPelicula", arr.show_title);
 		});
 
+		$( "#movie-btn-"+cont ).click(function() {
+  			alert( arr.show_title);
+  			localStorage.setItem("tituloPelicula", arr.show_title);
+		});
+
 		cont++;
-		console.log(cont);
 	}
 
 
-	//var valuee = localStorage.getItem(tituloPelicula");
+	//var valuee = localStorage.getItem("tituloPelicula");
 });
