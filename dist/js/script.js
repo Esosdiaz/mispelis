@@ -20263,14 +20263,13 @@ $(document).ready(function() {
     console.log(e);
 
       e.forEach(function(el){
-        var contenido = '<div><h6>' + el.show_title + '</h></div>';
+        var contenido = '<div><h6>' + el.show_title + '</h6></div>';
          var act = $(".nomActor").append(contenido);
        })
 
     })
-
     .fail(function() {
      console.log("error");
-   });
+   })
 
-})
+});
