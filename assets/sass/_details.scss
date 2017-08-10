@@ -8,6 +8,11 @@
 		}
 		.imagen-pelicula-details{
 			height: 45vh;
+			padding: 0;
+			img{
+				width: 100%;
+				height: 250px;
+			}
 		}
 		.titulo-watch{
 			height: 40px;

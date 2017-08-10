@@ -20254,6 +20254,32 @@ if (jQuery) {
 })(jQuery);
 
 $(document).ready(function() {
+	var valuee = localStorage.getItem("tituloPelicula");
+	$.ajax({
+			url: 'https://netflixroulette.net/api/api.php',
+			type: 'GET',
+			dataType: 'json',
+			data: {title: valuee},
+			})
+			.done(function(arr) {
+				console.log("success");
+				console.log(arr);
+				mostrar(arr);
+			})
+			.fail(function() {
+				console.log("error");
+			})
+	function mostrar(arr){
+		var nombrePeliculaMovies = $('<p>').text(arr.show_title);
+		var anoLanzamientoMovies = $('<p>').text(arr.release_year);
+		var categoriaMovies = $('<p>').text(arr.category);
+		var duracionMovies = $('<p>').text(arr.runtime);
+		var directorMovies = $('<p>').text(arr.director);
+		var imagenDetails = $('<img>').attr("src",arr.poster);
+		$(".imagen-pelicula-details").append(imagenDetails);
+	}
+});
+$(document).ready(function() {
 	var pelis = ['As Good as It Gets', 'Vampire Knight', 'The Longest Day', 'Arthur and the Invisibles','The French Connection', 'Love Actually', 'The Union: The Business Behind Getting High', 'Marathon', 'A Greater Yes: The Story of Amy Newhouse'];
 	var cont = 0;
 	pelis.forEach(function(val){
