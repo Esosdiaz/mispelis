@@ -4,17 +4,13 @@ body{
 .welcome{
 	.row{
 		h1{
-			color: $blanco;
-			font-family: 'Anton', sans-serif;
-			font-weight: 700;
+			@include titulo();
 			font-size: 6em;
 		}
 		p{
 			padding: 20px;
 			button{
-				background-color: $blanco;
-				color: $rojoNetflix;
-				width: 95%;
+				@include botones();
 			}
 		}
 	}
@@ -45,31 +41,11 @@ body{
 		}
 	}
 }
-.createAccount{
-	display: none;
-	.input-field{
-		input{
-			color: $blanco;
-		}
-		label{
-			color: $blanco;
-		}
-		.active{
-			color: $blanco;
-		}
-	}
-	p{
-		.btnLets{
-		width: 30%;
-		}
-	}
-}
+
 .row{
 	a{
 		button{
-			background-color: $blanco;
-			color: $rojoNetflix;
-			width: 85%;
+			@include botones();
 		}
 	}
 }
