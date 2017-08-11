@@ -20257,6 +20257,11 @@ $(document).ready(function() {
 	var pelis = ['The Fumbleheads', 'Getting That Girl', 'The Longest Day', 'Old Joy','Over Your Cities Grass Will Grow', 'Love Actually', 'The Union: The Business Behind Getting High', 'Marathon','Inside the Hunt for the Boston Bomber','Scourge', 'The Club', 'Alien Abduction','Beginners','Cuban Fury','Crossroads'];
 	var cont = 0;
 	var favoritoMovies = JSON.parse(localStorage.getItem("favoritoMovies"));
+	if(favoritoMovies == null){
+		favoritoMovies = [];
+	}
+	//var favoritoMovies = [];
+
 
 	localStorage.setItem("favoritoMovies", JSON.stringify(favoritoMovies));
 
