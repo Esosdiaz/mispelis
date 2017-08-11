@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	$(".button-collapse").sideNav();
+	$('.modal').modal();
 	var pelis = ['The Fumbleheads', 'Getting That Girl', 'The Longest Day', 'Old Joy','Over Your Cities Grass Will Grow', 'Love Actually', 'The Union: The Business Behind Getting High', 'Marathon','Inside the Hunt for the Boston Bomber','Scourge', 'The Club', 'Alien Abduction','Beginners','Cuban Fury','Crossroads'];
 	var cont = 0;
 	var favoritoMovies = JSON.parse(localStorage.getItem("favoritoMovies"));
@@ -27,10 +29,10 @@ $(document).ready(function() {
 	
 	function peliculas(arr){
 		var nombrePeliculaMovies = $('<p>').text(arr.show_title);
-		var anoLanzamientoMovies = $('<p>').text(arr.release_year);
+		var anoLanzamientoMovies = $('<p>').text('('+arr.release_year +')');
 		var categoriaMovies = $('<p>').text(arr.category);
-		var duracionMovies = $('<p>').text(arr.runtime);
-		var directorMovies = $('<p>').text(arr.director);
+		var duracionMovies = $('<p>').text('Runtime: '+arr.runtime);
+		var directorMovies = $('<p>').text('Director: '+arr.director);
 
 		var linkMovies = $('<a href="details.html">').attr('class', 'link-movies');
 		var tituloMovies = $('<div>').attr('class', 'titulo-movies');
@@ -44,9 +46,9 @@ $(document).ready(function() {
 			detalleMovies.append(duracionMovies);
 			detalleMovies.append(directorMovies);
 
-		var guardarFavoritoMovies = $('<button>').attr('class', 'guardar-favorito-movies');
+		var guardarFavoritoMovies = $('<a>').attr('class', 'guardar-favorito-movies waves-effect btn boton-add-details');
 			guardarFavoritoMovies.attr('id', 'movie-btn-'+cont);
-			guardarFavoritoMovies.text('Save as Favorite');
+			guardarFavoritoMovies.text('Add favorites');
 
 		var infoMovies = $('<div>').attr('class', 'info-movies');
 			infoMovies.append(linkMovies);
@@ -60,7 +62,6 @@ $(document).ready(function() {
 		$('.movies').append(infoMovies);
 
 		$( "#movies-"+cont ).click(function() {
-  			alert( arr.show_title);
   			localStorage.setItem("tituloPelicula", arr.show_title);
 		});
 
@@ -77,7 +78,7 @@ $(document).ready(function() {
 				favoritoMovies.splice(favoritoMovies.indexOf(arr.show_title),1);
 				localStorage.setItem("favoritoMovies", JSON.stringify(favoritoMovies));
 				var storedFavorites = JSON.parse(localStorage.getItem("favoritoMovies"));
-				guardarFavoritoMovies.text('Save as Favorite');
+				guardarFavoritoMovies.text('Add favorites');
 				console.log(storedFavorites);
 			}
 		});
@@ -108,10 +109,10 @@ $(document).ready(function() {
 			if(valor == arr.category ){
 					
 				var nombrePeliculaMovies = $('<p>').text(arr.show_title);
-				var anoLanzamientoMovies = $('<p>').text(arr.release_year);
+				var anoLanzamientoMovies = $('<p>').text('('+arr.release_year +')');
 				var categoriaMovies = $('<p>').text(arr.category);
-				var duracionMovies = $('<p>').text(arr.runtime);
-				var directorMovies = $('<p>').text(arr.director);
+				var duracionMovies = $('<p>').text('Runtime: '+arr.runtime);
+				var directorMovies = $('<p>').text('Director: '+arr.director);
 
 				var linkMovies = $('<a href="details.html">').attr('class', 'link-movies');
 				var tituloMovies = $('<div>').attr('class', 'titulo-movies');
@@ -125,9 +126,9 @@ $(document).ready(function() {
 					detalleMovies.append(duracionMovies);
 					detalleMovies.append(directorMovies);
 
-				var guardarFavoritoMovies = $('<button>').attr('class', 'guardar-favorito-movies');
-					guardarFavoritoMovies.attr('id', 'movie-btn-'+cont);
-					guardarFavoritoMovies.text('Save as Favorite');
+				var guardarFavoritoMovies = $('<a>').attr('class', 'guardar-favorito-movies waves-effect btn boton-add-details');
+						guardarFavoritoMovies.attr('id', 'movie-btn-'+cont);
+						guardarFavoritoMovies.text('Add favorites');
 
 				var infoMovies = $('<div>').attr('class', 'info-movies');
 					infoMovies.append(linkMovies);
@@ -158,7 +159,7 @@ $(document).ready(function() {
 						favoritoMovies.splice(favoritoMovies.indexOf(arr.show_title),1);
 						localStorage.setItem("favoritoMovies", JSON.stringify(favoritoMovies));
 						var storedFavorites = JSON.parse(localStorage.getItem("favoritoMovies"));
-						guardarFavoritoMovies.text('Save as Favorite');
+						guardarFavoritoMovies.text('Add favorites');
 						console.log(storedFavorites);
 					}
 				});
@@ -167,5 +168,6 @@ $(document).ready(function() {
 			}
 		}
 	});
+
 
 });

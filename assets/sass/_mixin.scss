@@ -1,0 +1,12 @@
+@mixin addButton(){
+    width: 70px;
+    height: 20px;
+    padding-top: 2px;
+    font-size: 7px;
+    font-weight: 800;
+    line-height: 1;
+    padding: 3px 0;
+    background: $rojoNetflix;
+    margin-top: 6px;
+    border-radius: 10px;
+}
