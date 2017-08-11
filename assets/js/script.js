@@ -1,8 +1,9 @@
 $(document).ready(function() {
 
-  //var actorElegido = $("").val();
+  //var actorElegido = localStorage.getItem("nombredeActorElegido");
+
     $.ajax({
-      url: 'https://netflixroulette.net/api/api.php?actor=' + 'john travolta',
+      url: 'https://netflixroulette.net/api/api.php?actor=' + 'john travolta' /*+ actorElegido*/ ,
      type: 'GET',
      dataType: 'json',
    })
@@ -10,7 +11,7 @@ $(document).ready(function() {
     console.log(e);
 
       e.forEach(function(el){
-        var contenido = '<div><h6>' + el.show_title + '</h6></div><hr>';
+        var contenido = '<div><h6>' + el.show_title + '</h6></div><div><p>'+ 'Categoria: ' + el.category + '</p></div><hr>';
          var act = $(".pelisActor").append(contenido);
        })
 
