@@ -142,7 +142,6 @@ $(document).ready(function() {
 				$('.movies').append(infoMovies);
 
 				$( "#movies-"+cont ).click(function() {
-		  			alert( arr.show_title);
 		  			localStorage.setItem("tituloPelicula", arr.show_title);
 				});
 

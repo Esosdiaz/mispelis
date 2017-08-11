@@ -1,0 +1,76 @@
+#actores-body{
+	margin: 0;
+	padding: 0;
+	nav{
+		background-color: #2b2c30 !important;
+	}
+	a {
+		padding: 0px 18px;
+	}
+	.enlaces{
+		font-size: 18px;
+	}
+	.lupa{
+		font-size: 20px;
+		color: white;
+	}
+	.side-nav{
+		padding-bottom: 20px;
+	}
+	#seccion-actores{
+		margin: 0;
+		div{
+			div{
+				div{
+					padding: 0;
+					margin: 0;
+					div{
+						div{
+							h5{
+								text-align: center;
+								background-color: $colorfondo_negro;
+								margin: 0;
+								padding: 10px 40px;
+								color: $color_blanco;
+								text-transform: uppercase;
+							}
+						}
+					}
+					div{
+						#cont-actor{
+							background-color: $colorfondo_rojo;
+							margin: 0;
+							h2{
+								color: $color_blanco;
+								text-align: center;
+								padding: 70px 0;
+								text-transform: uppercase;
+								margin: 0;
+							}
+						}
+					}
+					div{
+						div{
+							div{
+								div{
+									h6{
+										font-weight: 600;
+										text-align: left;
+										padding-left: 5px;
+										font-size: 15px;
+									}
+									p{
+										font-weight: 600;
+										text-align: left;
+										padding-left: 5px;
+										font-size: 12px;
+									}
+								}
+							}
+						}
+					}	
+				}
+			}
+		}
+	}
+}

@@ -20254,6 +20254,111 @@ if (jQuery) {
 })(jQuery);
 
 $(document).ready(function() {
+     $(".button-collapse").sideNav();
+  var actorElegido = localStorage.getItem("actor");
+
+  $.ajax({
+    url: 'https://netflixroulette.net/api/api.php?actor=' + actorElegido ,
+    type: 'GET',
+    dataType: 'json',
+  })
+  .done(function(e) {
+    console.log(e);
+
+    e.forEach(function(el){
+      var contenido = '<div><h6>' + el.show_title + '</h6></div><div><p>'+ 'Categoria: ' + el.category + '</p></div><hr>';
+      var act = $(".pelisActor").append(contenido);
+    })
+
+    $("#nomActor").append(actorElegido);
+
+  })
+  .fail(function() {
+   console.log("error");
+ })
+
+
+});
+
+$(document).ready(function() {
+	$(".button-collapse").sideNav();
+    $('.modal').modal();
+	var valuee = localStorage.getItem("tituloPelicula");
+	$.ajax({
+			url: 'https://netflixroulette.net/api/api.php',
+			type: 'GET',
+			dataType: 'json',
+			data: {title: valuee},
+			})
+			.done(function(arr) {
+				console.log("success");
+				console.log(arr);
+				mostrar(arr);
+			})
+			.fail(function() {
+				console.log("error");
+			})
+	function mostrar(arr){
+		//Imagen en el div vacio
+		var imagenDetails = $('<img>').attr('src',arr.poster);
+		$(".imagen-pelicula-details").append(imagenDetails);
+		//Datos a texto
+		var nombrePeliculaMovies = $('<p>').text(arr.show_title);
+		nombrePeliculaMovies.attr("class","titulo-pelicula-details");
+		var anoLanzamientoMovies = $('<p>').text(arr.release_year);
+		anoLanzamientoMovies.attr("class","year-pelicula-details");
+		var categoriaMovies = $('<p>').text("Categoria: "+arr.category);
+		var duracionMovies = $('<p>').text(arr.runtime);
+		var directorMovies = $('<p>').text("Director: "+arr.director);
+		var sinopsisMovies = $('<p>').text(arr.summary);
+		var cantidadEstrellasArr = arr.rating;
+		var cantidadEstrellas = parseInt(cantidadEstrellasArr);
+		//console.log(cantidadEstrellas);
+		for(var i=0;i<cantidadEstrellas;i++){
+			$("#star-"+i).css("color","#c14748");
+		}
+		$(".info-peli-titulo").append(nombrePeliculaMovies);
+		$(".info-peli-titulo").append(anoLanzamientoMovies);
+		$(".info-peli-details").append(sinopsisMovies);
+		$(".info-peli-details").append(categoriaMovies);
+		$(".info-peli-details").append(directorMovies);
+		
+		//Actores
+		var actoresMoviesDiv = $('<div>').attr("class","actores-peli-details");
+		actoresMoviesDiv.append('<p>Starring:</p>');
+		$(".info-peli-details").append(actoresMoviesDiv);
+		var actores = arr.show_cast;
+		var actor = actores.split(",",1);
+		var actorName = actor[0];
+		console.log(actorName);
+		var linkActores = $('<a>').text(actorName);
+		linkActores.attr('class', 'link-actor');
+		actoresMoviesDiv.append(linkActores);
+		//Guardando datos
+		localStorage.setItem("actor",actorName);
+		$(".link-actor").click(function(){
+			window.location.href = "actores.html";
+		})
+
+		/*var cont = 0;
+		actores.forEach(function(el){
+			var linkActores = $('<a>').text(el);
+			linkActores.attr('class', 'link-actores');
+			linkActores.attr('id', 'link-actores-'+cont);
+			actoresMoviesDiv.append(linkActores);
+			$( "#link-actores-"+cont ).click(function() {
+			localStorage.setItem("actor", actores[cont]);
+			});
+			cont ++;
+		});
+*/
+		
+		/*var actoresMoviesDetails = $('<p>').text(arr.show_cast);
+		actoresMoviesDiv.append(actoresMoviesDetails);
+		*/
+	}
+});
+$(document).ready(function() {
 	$(".button-collapse").sideNav();
 	$('.modal').modal();
 	var pelis = ['The Fumbleheads', 'Getting That Girl', 'The Longest Day', 'Old Joy','Over Your Cities Grass Will Grow', 'Love Actually', 'The Union: The Business Behind Getting High', 'Marathon','Inside the Hunt for the Boston Bomber','Scourge', 'The Club', 'Alien Abduction','Beginners','Cuban Fury','Crossroads'];
@@ -20397,7 +20502,6 @@ $(document).ready(function() {
 				$('.movies').append(infoMovies);
 
 				$( "#movies-"+cont ).click(function() {
-		  			alert( arr.show_title);
 		  			localStorage.setItem("tituloPelicula", arr.show_title);
 				});
 
