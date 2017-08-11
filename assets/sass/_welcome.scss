@@ -39,10 +39,12 @@ body{
 	}
 }
 
-.row{
+.botonCreate{
 	a{
-		button{
-			@include botones();
+		.btnCreate{
+			width: 85%;
+			background-color: $blanco;
+			color: $rojoNetflix;
 		}
 	}
 }

@@ -20269,17 +20269,24 @@ $(document).ready(function(){
 	function validateForm(){
 		var usuario = $('#user').val();
 		var contrasena = $('#password').val();
+		var usuarioLocal= localStorage.getItem('userDat');
+		var contrasenaLocal=localStorage.getItem('passDat');
 
-		if (usuario == ""){
-			$('#mensajeUser').fadeIn();
-        	}else{
-        		if(contrasena == ""){
-        		$('#mensajePass').fadeIn();
-        		}else{
-				window.location.href = "xxxx.html"; //redirecciona una vez que se cumplan las validaciones. 
+		if (usuario == usuarioLocal && contrasena == contrasenaLocal){
+			window.location.href = "profile.html"; 
+				}else{
+					if(usuario == "" || usuario != usuarioLocal){
+						$('#mensajeUser').fadeIn();
+						}else{
+							$('#mensajeUser').hide();
+							if(contrasena == "" || contrasena != contrasenaLocal){
+								$('#mensajePass').fadeIn();
+							}
+						}
+					}
 				}	
-        	}
-        }
+		
+        
 
     //validaciones create account
     $('#mnsNameReg').hide();
@@ -20301,22 +20308,28 @@ $(document).ready(function(){
 
 		var mailRegr = /^[_a-z0-9-]+(.[_a-z0-9-]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,4})$/;
 
-		if (nombreReg == ""){
+		if (nombreReg == "" ){
 			$('#mnsNameReg').fadeIn();
 			}else{
+				$('#mnsNameReg').hide();
         		if(usuarioReg == "" ){
         			$('#mnsUserReg').fadeIn();
         			}else{
+        				$('#mnsUserReg').hide();
         				if(contrasenaReg == ""){
         					$('#mnsPassReg').fadeIn();
         					}else{
+        						$('#mnsPassReg').hide();
         						if(correoReg == "" || !mailRegr.test(correoReg)){
         						$('#mnsMailReg').fadeIn();
         						}else{
+        							$('#mnsMailReg').hide();
         							if(paisReg == ""){
         								$('#mnsCountryReg').fadeIn();
         								}else{
-        								window.location.href = "xxxx.html"
+        								$('#mnsCountryReg').hide();
+        								window.location.href = "movies.html";
+        								guardarDatos();
         							}
         						}
         					}
@@ -20324,6 +20337,15 @@ $(document).ready(function(){
 
 				}
 			}
+	 function guardarDatos(){
+	 	localStorage.setItem("nameDat", $('#nameReg').val());
+	 	localStorage.setItem("userDat", $('#userReg').val());
+	 	localStorage.setItem("passDat", $('#passwordReg').val());
+	 	localStorage.setItem("mailDat",	$('#mailReg').val());
+	 	localStorage.setItem("countryDat", $('#countryReg').val());
+	 }
+
+
 
 
     });      				
