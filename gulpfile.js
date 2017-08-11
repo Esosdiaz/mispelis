@@ -19,18 +19,10 @@ gulp.task('style', function(){
 	.pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task('webserver', function(){
-	gulp.src('../mispelis/')
-		.pipe(webserver({
-			fallback: 'index.html',
-			livereload: true,
-			directoryListing: false,
-			open: true		
-	}));
-});
+
 
 gulp.task('watch', function() {
     gulp.watch('assets/sass/*.scss', ['style']);
 });
 
-gulp.task('default', ['script', 'style', 'webserver', 'watch']);
+gulp.task('default', ['script', 'style', 'watch']);

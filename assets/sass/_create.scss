@@ -1,0 +1,28 @@
+.create{
+	.createAccount{
+		h1{
+			@include titulo();
+			font-size: 4em;
+		}
+		.input-field{
+			input{
+				color: $blanco;
+			}
+			label{
+				color: $blanco;
+			}
+			.active{
+				color: $blanco;
+			}
+			span{
+				@include validacion();
+			}
+		}
+		p{
+			padding-top: 20px;
+			button{
+				@include botones();
+			}
+		}
+	}
+}
