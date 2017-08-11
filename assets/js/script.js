@@ -1,4 +1,6 @@
 $(document).ready(function(){ 
+	$(".button-collapse").sideNav();
+
 	//toggle del boton login
    $('#btn-logIn').on('click',function(){
       $('#log-In').toggle('slow');

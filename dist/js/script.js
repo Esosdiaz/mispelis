@@ -20253,26 +20253,6 @@ if (jQuery) {
   };
 })(jQuery);
 
-$( document ).ready(function(){
-	$(".button-collapse").sideNav();
-	$('.modal').modal();
-
-});
-
-$( document ).ready(function(){
-	$('window').onload(function(recuperar-datos){ 
-
-		var usuario = localStorage.getItem("nameDat");
-		var nombre = localStorage.getItem("userDat");
-		var pais = localStorage.getItem("countryDat");
-
-		$("#usuario-profile").append(usuario);
-		$("#nombre-profile").append(nombre);
-		$("#pais-profile").append('pais');
-	});
-        
-	$(".button-collapse").sideNav();
-  
 $(document).ready(function() {
 	$(".button-collapse").sideNav();
 	$('.modal').modal();
@@ -20443,10 +20423,30 @@ $(document).ready(function() {
 			}
 		}
 	});
+
+
 });
-  
-  
+$( document ).ready(function(){
+
+	$(".button-collapse").sideNav();
+	$('.modal').modal();
+
+		var usuario = localStorage.getItem("nameDat");
+		var nombre = localStorage.getItem("userDat");
+		var pais = localStorage.getItem("countryDat");
+
+		$("#usuario-profile").append(usuario);
+		$("#nombre-profile").append(nombre);
+		$("#pais-profile").append(pais);
+	});
+        
+
+
+
+
 $(document).ready(function(){ 
+	$(".button-collapse").sideNav();
+
 	//toggle del boton login
    $('#btn-logIn').on('click',function(){
       $('#log-In').toggle('slow');
@@ -20542,8 +20542,6 @@ $(document).ready(function(){
 
 
     });      				
-
-
 
 
 
