@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function(){
 	$(".button-collapse").sideNav();
 	$('.modal').modal();
 	var pelis = ['The Fumbleheads', 'Getting That Girl', 'The Longest Day', 'Old Joy','Over Your Cities Grass Will Grow', 'Love Actually', 'The Union: The Business Behind Getting High', 'Marathon','Inside the Hunt for the Boston Bomber','Scourge', 'The Club', 'Alien Abduction','Beginners','Cuban Fury','Crossroads'];
@@ -168,6 +168,3 @@ $(document).ready(function() {
 			}
 		}
 	});
-
-
-});
