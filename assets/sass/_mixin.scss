@@ -1,3 +1,4 @@
+
 @mixin addButton(){
     width: 70px;
     height: 20px;
@@ -9,4 +10,19 @@
     background: $rojoNetflix;
     margin-top: 6px;
     border-radius: 10px;
+@mixin botones(){
+	background-color: $blanco;
+	color: $rojoNetflix;
+	width: 95%;
+}
+@mixin titulo(){
+	color: $blanco;
+	font-family: 'Anton', sans-serif;
+	font-weight: 700;
+}
+@mixin validacion(){
+	color: $blanco;
+	font-weight: 700;
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 3px; 
 }

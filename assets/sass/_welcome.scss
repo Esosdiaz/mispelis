@@ -1,21 +1,50 @@
 body{
 	background-color: $rojoNetflix;
-	.welcome{
-		.row{
-			h1{
-				color: $blanco;
-				font-family: 'Anton', sans-serif;
-				font-weight: 700;
-				font-size: 6em;
+}
+.welcome{
+	.row{
+		h1{
+			@include titulo();
+			font-size: 6em;
+		}
+		p{
+			padding: 20px;
+			button{
+				@include botones();
 			}
-			p{
-				padding: 20px;
-				button{
-					background-color: $blanco;
-					color: $rojoNetflix;
-					width: 95%;
-				}
-			}
+		}
+	}
+}
+.logIn{
+	display: none;
+	.input-field{
+		padding-bottom: 15px;
+		input{
+			color: $blanco;
+		}
+		label{
+			color: $blanco;
+		}
+		.active{
+			color: $blanco;
+		}
+		span{
+			@include validacion();
+		}
+	}
+	p{
+		.btnLets{
+		width: 30%;
+		}
+	}
+}
+
+.botonCreate{
+	a{
+		.btnCreate{
+			width: 85%;
+			background-color: $blanco;
+			color: $rojoNetflix;
 		}
 	}
 }
