@@ -29,10 +29,7 @@ body{
 			color: $blanco;
 		}
 		span{
-			color: $blanco;
-			font-weight: 700;
-			background-color: rgba(0, 0, 0, 0.5);
-			padding: 3px; 
+			@include validacion();
 		}
 	}
 	p{
