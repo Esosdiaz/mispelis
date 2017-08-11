@@ -1,8 +1,8 @@
 $(document).ready(function() {
-
+  var valorLink = localStorage.getItem("actor");
   //var actorElegido = $("").val();
     $.ajax({
-      url: 'https://netflixroulette.net/api/api.php?actor=' + 'john travolta',
+      url: 'https://netflixroulette.net/api/api.php?actor=' + valorLink,
      type: 'GET',
      dataType: 'json',
    })
