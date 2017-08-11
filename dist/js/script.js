@@ -20270,13 +20270,25 @@ $(document).ready(function() {
 				console.log("error");
 			})
 	function mostrar(arr){
+		//Imagen en el div vacio
+		var imagenDetails = $('<img>').attr('src',arr.poster);
+		$(".imagen-pelicula-details").append(imagenDetails);
+		//Datos a texto
 		var nombrePeliculaMovies = $('<p>').text(arr.show_title);
+		nombrePeliculaMovies.attr("class","titulo-pelicula-details");
 		var anoLanzamientoMovies = $('<p>').text(arr.release_year);
+		anoLanzamientoMovies.attr("class","year-pelicula-details");
 		var categoriaMovies = $('<p>').text(arr.category);
 		var duracionMovies = $('<p>').text(arr.runtime);
 		var directorMovies = $('<p>').text(arr.director);
-		var imagenDetails = $('<img>').attr("src",arr.poster);
-		$(".imagen-pelicula-details").append(imagenDetails);
+		var sinopsisMovies = $('<p>').text(arr.summary);
+		//show_cast actores
+		
+		$(".info-peli-titulo").append(nombrePeliculaMovies);
+		$(".info-peli-titulo").append(anoLanzamientoMovies);
+		$(".info-peli-details").append(sinopsisMovies);
+		$(".info-peli-details").append(categoriaMovies);
+		$(".info-peli-details").append(directorMovies);
 	}
 });
 $(document).ready(function() {
@@ -20344,4 +20356,26 @@ $(document).ready(function() {
 
 
 	//var valuee = localStorage.getItem("tituloPelicula");
+});
+$(document).ready(function() {
+
+  //var actorElegido = $("").val();
+    $.ajax({
+      url: 'https://netflixroulette.net/api/api.php?actor=' + 'john travolta',
+     type: 'GET',
+     dataType: 'json',
+   })
+    .done(function(e) {
+    console.log(e);
+
+      e.forEach(function(el){
+        var contenido = '<div><h6>' + el.show_title + '</h6></div><hr>';
+         var act = $(".pelisActor").append(contenido);
+       })
+
+    })
+    .fail(function() {
+     console.log("error");
+   })
+
 });

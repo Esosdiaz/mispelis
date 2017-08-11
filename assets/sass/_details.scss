@@ -23,6 +23,15 @@
 		.info-peli-details{
 			background: $blanco;
 			height: 44vh;
+			.info-peli-titulo{
+				padding: 0;
+				.titulo-pelicula-details{
+					font-weight: 500;
+				}
+				.year-pelicula-details{
+					padding-left: 20px;
+				}
+			}
 		}
 	}
 }
