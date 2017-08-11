@@ -20270,6 +20270,8 @@ $(document).ready(function() {
       var act = $(".pelisActor").append(contenido);
     })
 
+    $("#nomActor").append(actorElegido);
+
   })
   .fail(function() {
    console.log("error");
@@ -20277,4 +20279,5 @@ $(document).ready(function() {
 
 
 });
+
 
