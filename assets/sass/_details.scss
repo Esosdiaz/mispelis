@@ -19,12 +19,26 @@
 			.icono-flecha-watch{
 				margin-left: 20px;
 			}
+			.icono-play-watch{
+				margin-left: 50%;
+				margin-bottom: 51px;
+				.icono-play{
+					color: $rojoNetflix;
+				}
+			}
 		}
 		.info-peli-details{
 			background: $blanco;
 			height: 44vh;
 			color: darkgray;
 			font-size: 11px;
+			.star-cont{
+				margin-top: 5px;
+				.boton-add-details{
+					@include addButton();
+				}
+			}
+			
 			.info-peli-titulo{
 				padding: 5px 0;
 				font-size: 13px;

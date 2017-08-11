@@ -40,8 +40,9 @@ $(document).ready(function() {
 		$(".info-peli-details").append(actoresMoviesDiv);
 		
 		var actores = arr.show_cast;
-		actores.split(",");
-		var cont = 0;
+		actores.split(",",1);
+		console.log(actores);
+		/*var cont = 0;
 		actores.forEach(function(el){
 			var linkActores = $('<a>').text(el);
 			linkActores.attr('class', 'link-actores');
@@ -52,7 +53,7 @@ $(document).ready(function() {
 			});
 			cont ++;
 		});
-
+*/
 		
 		/*var actoresMoviesDetails = $('<p>').text(arr.show_cast);
 		actoresMoviesDiv.append(actoresMoviesDetails);

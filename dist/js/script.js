@@ -20295,8 +20295,9 @@ $(document).ready(function() {
 		$(".info-peli-details").append(actoresMoviesDiv);
 		
 		var actores = arr.show_cast;
-		actores.split(",");
-		var cont = 0;
+		actores.split(",",1);
+		console.log(actores);
+		/*var cont = 0;
 		actores.forEach(function(el){
 			var linkActores = $('<a>').text(el);
 			linkActores.attr('class', 'link-actores');
@@ -20307,7 +20308,7 @@ $(document).ready(function() {
 			});
 			cont ++;
 		});
-
+*/
 		
 		/*var actoresMoviesDetails = $('<p>').text(arr.show_cast);
 		actoresMoviesDiv.append(actoresMoviesDetails);
@@ -20381,10 +20382,10 @@ $(document).ready(function() {
 	//var valuee = localStorage.getItem("tituloPelicula");
 });
 $(document).ready(function() {
-
+  var valorLink = localStorage.getItem("actor");
   //var actorElegido = $("").val();
     $.ajax({
-      url: 'https://netflixroulette.net/api/api.php?actor=' + 'john travolta',
+      url: 'https://netflixroulette.net/api/api.php?actor=' + valorLink,
      type: 'GET',
      dataType: 'json',
    })
