@@ -20254,6 +20254,8 @@ if (jQuery) {
 })(jQuery);
 
 $(document).ready(function() {
+	$(".button-collapse").sideNav();
+    $('.modal').modal();
 	var valuee = localStorage.getItem("tituloPelicula");
 	$.ajax({
 			url: 'https://netflixroulette.net/api/api.php',
