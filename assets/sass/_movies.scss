@@ -1,0 +1,14 @@
+#body-movies{
+	background-color: white;
+	.titulo-movies{
+		display: flex;
+		flex-direction: row;
+	}
+	.detalle-movies{
+		display: flex;
+		flex-direction: row;
+	}
+	select{
+		display: inline-block;
+	}
+}
