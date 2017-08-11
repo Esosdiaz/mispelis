@@ -1,0 +1,52 @@
+#body-movies{
+	nav{
+	background-color: #2b2c30 !important;
+	padding: 4px 5px 10px 0px;
+	}
+	a {
+		padding: 0px 18px;
+	}
+	.enlaces{
+		font-size: 18px;
+	}
+	.lupa{
+		font-size: 20px;
+		color: white;
+	}
+	.side-nav{
+		padding-bottom: 20px;
+	}
+	background-color: white;
+	.titulo-movies{
+		display: flex;
+		flex-direction: row;
+		p{
+			margin: 1px 5px;
+		}
+	}
+	.detalle-movies{
+		display: flex;
+		flex-direction: row;
+		p{
+			margin: 1px 5px;
+		}
+	}
+	select{
+		display: inline-block;
+	}
+	.movies{
+		padding: 5px 20px;
+	}
+	.info-movies{
+		background-color: #cecccc;
+		margin: 10px;
+		a{
+			color: black;
+			font-weight: bold;
+		}
+	}
+	
+	.boton-add-details{
+        @include addButton();
+    }
+}

@@ -1,0 +1,71 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+nav{
+	background-color: #2b2c30 !important;
+	padding: 4px 5px 10px 0px;
+}
+a {
+	padding: 0px 18px;
+}
+.enlaces{
+	font-size: 18px;
+}
+.lupa{
+	font-size: 20px;
+	color: white;
+}
+.side-nav{
+	padding-bottom: 20px;
+}
+.lapiz{
+	position: relative;
+	top: -31px;
+	left: 212px;
+}
+
+
+#cuerpo{
+	background: white;
+}
+
+.uno{
+	padding: 20px 0px 20px 0px;
+}
+.profile{
+	width: 50%;
+}
+/*modal de foto*/
+.borde-modal{
+	padding: 0px 5px 10px 10px;
+}
+
+.enlace-modal{
+	color: black;
+	padding: 5px 0px 10px 5px;
+}
+.rojo{
+	background-color: red;
+	color: white;
+}
+.titulo-my-favorito{
+	font-size: 20px;
+}
+.titulo-peliculas{
+	border-bottom: 1px solid black;
+}
+
+#usuario-profile{
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+#nombre-profile{
+	font-size: 16px;
+	font-weight: 600;
+}
+#pais-profile{
+	font-size: 16px;
+	font-weight: 600;
+}
