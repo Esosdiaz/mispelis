@@ -24,14 +24,19 @@ side-nav{
 	top: -31px;
 	left: 212px;
 }
+
+
+#cuerpo{
+	background: white;
+}
+
 .uno{
 	padding: 20px 0px 20px 0px;
 }
 .profile{
 	width: 50%;
 }
-
-
+/*modal de foto*/
 .borde-modal{
 	padding: 0px 5px 10px 10px;
 }
@@ -47,7 +52,6 @@ side-nav{
 .titulo-my-favorito{
 	font-size: 20px;
 }
-
 .titulo-peliculas{
 	border-bottom: 1px solid black;
 }

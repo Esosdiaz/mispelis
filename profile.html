@@ -3,134 +3,113 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<title>MIS PELIS</title>
-	<script src="https://use.fontawesome.com/52df75c062.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Anton|Montserrat:400,500,600,700" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<link rel="stylesheet" href="dist/css/style.min.css">
+	<title>MIS PELIS-PROFILE</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+  <link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
-	<!-- Aqui va el nav con slider -->
-	<nav>
-    	<div class="nav-wrapper">
-      		<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"><i class="fa fa-bars" aria-hidden="true"></i></i></a>
-      		<a href="#!" class="enlaces">PROFILE</a>
-      		<a href="#"><i class="fa fa-search lupa" aria-hidden="true"></i></a>
-      			<ul class="side-nav" id="mobile-demo">
-        			<li><a href="home.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>HOME</a></li>
-        			<li><a href="profile.html"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>PROFILE</a></li>
-        			<li><a href="movies.html"><i class="fa fa-film fa-2x" aria-hidden="true"></i>MOVIES</a></li>
-      			</ul>
-    	</div>
-  	</nav>
-  	<!-- aqui termina el nav con slider -->
-  	<section>
-    	<div class="container-fluid">
-      		<div class="row uno">
-        		<div class="col s12 center">
-          			<img src="assets/img/17603.svg" class="profile" alt=""> 
-        		</div>
-            	<a class="lapiz waves-light modal-trigger" href="#modal1">
-              		<i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i>
-            	</a>
-            	<!-- modal de foto -->
-            	<div id="modal1" class="modal">
-              		<div class="modal-content">
-                		<ul>
-                  			<li class="borde-modal"><a class="enlace-modal" href=""><i class="fa fa-upload" aria-hidden="true"></i>   Subir Foto</a></li>
-                  			<li class="borde-modal"><a class="enlace-modal" href=""><i class="fa fa-check" aria-hidden="true"></i>  Elegir Foto</a></li>
-                  			<li class="borde-modal"><a class="enlace-modal" href=""><i class="fa fa-file-image-o" aria-hidden="true"></i>  Ver Foto</a></li>
-                  			<li class="borde-modal"><a class="enlace-modal" href=""><i class="fa fa-camera" aria-hidden="true"></i>  Tomar Foto</a></li>
-                		</ul>
-              		</div>
-            	</div>
-            		<!-- fin de modal foto -->
+   <nav>
+    <div class="nav-wrapper">
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons"><i class="fa fa-bars" aria-hidden="true"></i></i></a>
+      <a href="#!" class="enlaces">PROFILE</a>
+      <a href="#"><i class="fa fa-search lupa" aria-hidden="true"></i></a>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="home.html"><i class="fa fa-home fa-2x" aria-hidden="true"></i>HOME</a></li>
+        <li><a href="profile.html"><i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i>PROFILE</a></li>
+        <li><a href="movies.html"><i class="fa fa-film fa-2x" aria-hidden="true"></i>MOVIES</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section id="cuerpo">
+    <div class="container-fluid">
+      <div class="row uno">
+        <div class="col s12 center">
+          <img src="dist/img/17603.svg" class="profile" alt=""> 
+        </div>
+            <a class="lapiz waves-light modal-trigger" href="#modal1">
+              <i class="fa fa-pencil-square fa-2x" aria-hidden="true"></i>
+            </a>
+            <!-- modal de foto -->
+            <div id="modal1" class="modal">
+              <div class="modal-content">
+                <ul>
+                  <li class="borde-modal"><a class="enlace-modal" href=""><i class="fa fa-upload" aria-hidden="true"></i>   Subir Foto</a></li>
+                  <li class="borde-modal"><a class="enlace-modal" href=""><i class="fa fa-check" aria-hidden="true"></i>  Elegir Foto</a></li>
+                  <li class="borde-modal"><a class="enlace-modal" href=""><i class="fa fa-file-image-o" aria-hidden="true"></i>  Ver Foto</a></li>
+                  <li class="borde-modal"><a class="enlace-modal" href=""><i class="fa fa-camera" aria-hidden="true"></i>  Tomar Foto</a></li>
+                </ul>
+              </div>
+            </div>
+            <!-- fin de modal foto -->
+        </div>
+        <div class="row">
+        	<div class="col s12 center">
+        		<p id="usuario-profile"><b>UserName:</b></p>
+        		<p id="nombre-profile"><b>Name: </b></p>
+        		<p id="pais-profile"><b>Country:</b></p>
         	</div>
-        	<div class="row">
-        		<div class="col s12 center">
-        			<p><b>UserName:</b></p>
-        			<p><b>Name: </b></p>
-        			<p><b>Country:</b></p>
-        		</div>
+        </div>
+        <div class="row rojo">
+        	<div class="col s12 ">
+  				<h6 class="titulo-my-favorito">My Favorites</h6>
         	</div>
-        	<div class="row rojo">
-        		<div class="col s12 ">
-  					<h6 class="titulo-my-favorito">My Favorites</h6>
-        		</div>
-        	</div>
-        	<div class="row">
-          		<div class="col s6">
-            	<!-- aqui va el carta de las peliculas -->
-            		<div class="card">
-              			<div class="card-image waves-effect waves-block waves-light">
-                			<img class="activator" src="assets/img/soy_el_numero_cuatro-dvd.jpg">
-              			</div>
-              			<div class="card-content">
-                			<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              			</div>
-              			<div class="card-reveal">
-                			<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                			<p>Here is some more information about this product that is only revealed once clicked on.</p>
-              			</div>
-            		</div>
-            		<!-- Aqui termina las cartas de las peliculas -->
-				</div>
-          		<div class="col s6">
-            		<div class="card">
-            		<!-- aqui va la carta de las peliculas -->
-              			<div class="card-image waves-effect waves-block waves-light">
-                			<img class="activator" src="assets/img/images.jpg">
-              			</div>
-              			<div class="card-content">
-                			<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              			</div>
-              			<div class="card-reveal">
-                			<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                			<p>Here is some more information about this product that is only revealed once clicked on.</p>
-              			</div>
-              			<!-- aqui termina la carta de las peliculas -->
-            		</div>
-          		</div>
-        	</div>
-        	<div class="row">
-          		<div class="col s6">
-          			<!-- la carta de peliculas -->
-            		<div class="card">
-              			<div class="card-image waves-effect waves-block waves-light">
-                			<img class="activator" src="assets/img/download (1).jpg">
-              			</div>
-              			<div class="card-content">
-                			<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              			</div>
-              			<div class="card-reveal">
-                			<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                			<p>Here is some more information about this product that is only revealed once clicked on.</p>
-              			</div>
-            		</div>
-            		<!-- aqui termina las carta de peliculas -->
-          		</div>
-          		<div class="col s6">
-            		<div class="card">
-              			<div class="card-image waves-effect waves-block waves-light">
-                			<img class="activator" src="assets/img/download.jpg">
-              			</div>
-              			<div class="card-content">
-                			<span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-              			</div>
-              			<div class="card-reveal">
-                			<span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-                			<p>Here is some more information about this product that is only revealed once clicked on.</p>
-              			</div>
-            		</div>
-          		</div>
-        	</div>
-      	</div>
-  	</section>
-
-
-
-  <script src="https://use.fontawesome.com/477be0bbd3.js"></script>
-  <script src="dist/js/script.js"></script>
+        </div>
+        <div class="row">
+          <div class="col s6">
+            <!-- aqui va el carta de las peliculas -->
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="dist/img/soy_el_numero_cuatro-dvd.jpg">
+              </div>
+              <div class="card-content">
+                <span class="text-darken-1"><b>Soy el numero cuatro</b><i class="material-icons right">more_vert</i></span>
+              </div>
+            <!-- >qui termina la carta de las peliculas -->
+            </div>
+          </div>
+          <div class="col s6">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="dist/img/movieposter.jpg">
+              </div>
+              <div class="card-content">
+                <span class="text-darken-1"><b>Love Actuality</b><i class="material-icons right">more_vert</i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s6">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="dist/img/download.jpg">
+              </div>
+              <div class="card-content">
+                <span class="text-darken-1"><b>La Princesa y el Sapo</b><i class="material-icons right">more_vert</i></span>
+              </div>
+            </div>
+          </div>
+          <div class="col s6">
+            <div class="card">
+              <div class="card-image waves-effect waves-block waves-light">
+                <img class="activator" src="dist/img/images.jpg">
+              </div>
+              <div class="card-content">
+                <span class="text-darken-1"><b>Max Mad</b><i class="material-icons right">more_vert</i></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+        
+  
+		<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+    <script src="https://use.fontawesome.com/477be0bbd3.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
-
