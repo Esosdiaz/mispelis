@@ -1,4 +1,10 @@
 $( document ).ready(function(){
+
+	$(".button-collapse").sideNav();
+	$('.modal').modal();
+
+});
+
 	$('window').onload(function(recuperar-datos){ 
 
 		var usuario = localStorage.getItem("nameDat");
@@ -12,3 +18,4 @@ $( document ).ready(function(){
         
 	$(".button-collapse").sideNav();
 });
+

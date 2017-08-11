@@ -20253,7 +20253,12 @@ if (jQuery) {
   };
 })(jQuery);
 
-<<<<<<< HEAD
+$( document ).ready(function(){
+	$(".button-collapse").sideNav();
+	$('.modal').modal();
+
+});
+
 $( document ).ready(function(){
 	$('window').onload(function(recuperar-datos){ 
 
@@ -20267,7 +20272,7 @@ $( document ).ready(function(){
 	});
         
 	$(".button-collapse").sideNav();
-=======
+  
 $(document).ready(function() {
 	$(".button-collapse").sideNav();
 	$('.modal').modal();
@@ -20438,10 +20443,9 @@ $(document).ready(function() {
 			}
 		}
 	});
-
-
->>>>>>> a2c79bc67a39e3396db76ccd7b1fbcedb257433d
 });
+  
+  
 $(document).ready(function(){ 
 	//toggle del boton login
    $('#btn-logIn').on('click',function(){
@@ -20538,6 +20542,7 @@ $(document).ready(function(){
 
 
     });      				
+
 
 
 
