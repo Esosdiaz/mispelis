@@ -23,10 +23,14 @@
 		.info-peli-details{
 			background: $blanco;
 			height: 44vh;
+			color: darkgray;
+			font-size: 11px;
 			.info-peli-titulo{
-				padding: 0;
+				padding: 5px 0;
+				font-size: 13px;
 				.titulo-pelicula-details{
 					font-weight: 500;
+					color: black;
 				}
 				.year-pelicula-details{
 					padding-left: 20px;

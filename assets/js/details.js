@@ -23,9 +23,9 @@ $(document).ready(function() {
 		nombrePeliculaMovies.attr("class","titulo-pelicula-details");
 		var anoLanzamientoMovies = $('<p>').text(arr.release_year);
 		anoLanzamientoMovies.attr("class","year-pelicula-details");
-		var categoriaMovies = $('<p>').text(arr.category);
+		var categoriaMovies = $('<p>').text("Categoria: "+arr.category);
 		var duracionMovies = $('<p>').text(arr.runtime);
-		var directorMovies = $('<p>').text(arr.director);
+		var directorMovies = $('<p>').text("Director: "+arr.director);
 		var sinopsisMovies = $('<p>').text(arr.summary);
 		//show_cast actores
 		
@@ -34,5 +34,28 @@ $(document).ready(function() {
 		$(".info-peli-details").append(sinopsisMovies);
 		$(".info-peli-details").append(categoriaMovies);
 		$(".info-peli-details").append(directorMovies);
+		//Actores
+		var actoresMoviesDiv = $('<div>').attr("class","actores-peli-details");
+		actoresMoviesDiv.append('<p>Starring:</p>');
+		$(".info-peli-details").append(actoresMoviesDiv);
+		
+		var actores = arr.show_cast;
+		actores.split(",");
+		var cont = 0;
+		actores.forEach(function(el){
+			var linkActores = $('<a>').text(el);
+			linkActores.attr('class', 'link-actores');
+			linkActores.attr('id', 'link-actores-'+cont);
+			actoresMoviesDiv.append(linkActores);
+			$( "#link-actores-"+cont ).click(function() {
+			localStorage.setItem("actor", actores[cont]);
+			});
+			cont ++;
+		});
+
+		
+		/*var actoresMoviesDetails = $('<p>').text(arr.show_cast);
+		actoresMoviesDiv.append(actoresMoviesDetails);
+		*/
 	}
 });
