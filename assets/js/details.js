@@ -40,8 +40,14 @@ $(document).ready(function() {
 		$(".info-peli-details").append(actoresMoviesDiv);
 		
 		var actores = arr.show_cast;
-		actores.split(",",1);
-		console.log(actores);
+		var actor = actores.split(",",1);
+		var actorName = actor[0];
+		console.log(actorName);
+		var linkActores = $('<a>').text(actorName);
+		linkActores.attr('class', 'link-actor');
+		actoresMoviesDiv.append(linkActores);
+		localStorage.setItem("actor",actorName);
+		
 		/*var cont = 0;
 		actores.forEach(function(el){
 			var linkActores = $('<a>').text(el);
