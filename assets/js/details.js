@@ -27,18 +27,22 @@ $(document).ready(function() {
 		var duracionMovies = $('<p>').text(arr.runtime);
 		var directorMovies = $('<p>').text("Director: "+arr.director);
 		var sinopsisMovies = $('<p>').text(arr.summary);
-		//show_cast actores
-		
+		var cantidadEstrellasArr = arr.rating;
+		var cantidadEstrellas = parseInt(cantidadEstrellasArr);
+		//console.log(cantidadEstrellas);
+		for(var i=0;i<cantidadEstrellas;i++){
+			$("#star-"+i).css("color","#c14748");
+		}
 		$(".info-peli-titulo").append(nombrePeliculaMovies);
 		$(".info-peli-titulo").append(anoLanzamientoMovies);
 		$(".info-peli-details").append(sinopsisMovies);
 		$(".info-peli-details").append(categoriaMovies);
 		$(".info-peli-details").append(directorMovies);
+		
 		//Actores
 		var actoresMoviesDiv = $('<div>').attr("class","actores-peli-details");
 		actoresMoviesDiv.append('<p>Starring:</p>');
 		$(".info-peli-details").append(actoresMoviesDiv);
-		
 		var actores = arr.show_cast;
 		var actor = actores.split(",",1);
 		var actorName = actor[0];
@@ -46,8 +50,12 @@ $(document).ready(function() {
 		var linkActores = $('<a>').text(actorName);
 		linkActores.attr('class', 'link-actor');
 		actoresMoviesDiv.append(linkActores);
+		//Guardando datos
 		localStorage.setItem("actor",actorName);
-		
+		$(".link-actor").click(function(){
+			window.location.href = "actores.html";
+		})
+
 		/*var cont = 0;
 		actores.forEach(function(el){
 			var linkActores = $('<a>').text(el);
